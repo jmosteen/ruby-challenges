@@ -1,0 +1,31 @@
+puts "What is your birthdate in this format MMDDYYYY?"
+birthdate = gets
+number = birthdate [0].to_i + birthdate [1].to_i + birthdate [2].to_i + birthdate [3].to_i + birthdate [4].to_i + birthdate [5].to_i + birthdate [6].to_i + birthdate [7].to_i
+number = number.to_s
+number = number [0].to_i + number [1].to_i
+if number > 9
+	number = number [0].to_i + number [1].to_i
+end
+intro = "Your numerology number is #{number} ."
+case number
+when 1
+	puts "#{intro}\nOne is the leader. The number one indicates the ability to stand alone, and is a strong vibration. Ruled by the Sun."
+when 2 
+	puts "#{intro}\nThis is the mediator and peace-lover. The number two indicates the desire for harmony. It is gentle, considerate, and sensitive vibration. Ruled by the moon."
+when 3
+	puts "#{intro}\nThis is a sociable, friendly, and outgoing vibration. Kind, positive, and optimistic, Three's enjoy lfe and have a good sense of humor. Ruled by Jupiter."
+when 4
+	puts "#{intro}\nThis is the worker. Practical, with a love of detail, fours are trustworthy, hard-working, and helpful. Ruled by Uranus."
+when 5
+	puts "#{intro}\nThis is the freedom lover. The number five is an intellectual vibration. These are 'idea' people with a love of variety. and the ability to adapt to most situations. Ruled by Mercury."
+when 6
+	puts "#{intro}\nThis is the peace lover. The number six is a loving, stable and harmonious vibration. Ruled by venus."
+when 7
+	puts "#{intro}\nThis is the deep thinker. The number seven is a spiritual vibration. These people are not very attached to material things, are introspective, and generally quiet. Ruled by Neptune."
+when 8
+	puts "#{intro}\nThis is the manager. Number Eight is a strong, successful, and material vibration. Ruled by Saturn"
+when 9
+	puts "#{intro}\nThis is the teacher. Number nine is a tolerant, somewhat impractical, and sympathetic vibration. Ruled by mars."
+else
+	puts "Uh oh! Your birth path number is not 1-9"
+end
